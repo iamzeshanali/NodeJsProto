@@ -13,7 +13,8 @@ const createCategory = catchAsync(async (req, res) => {
 const getCategories = catchAsync(async (req, res) => {
     const filter = pick(req.query, ['name']);
     const options = pick(req.query, ['sortBy', 'limit', 'page', 'pagination']);
-    const categories = await categoryService.queryCategories(filter, options);
+    // const categories = await categoryService.queryCategories(filter, options);
+    const categories = [1,2,3];
     new ApiResponse(httpStatus.OK, httpStatus[httpStatus.OK], { categories }).send(res);
 });
 
