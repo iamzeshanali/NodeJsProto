@@ -27,7 +27,6 @@ const updateCakeById = async(id, body) => {
 
 const deleteCakeById = async(id)=>{
     const cake = await getCakeById(id);
-
     if(!cake){
         throw new ApiError(httpStatus.NOT_FOUND, 'Cake not Found');
     }else{
